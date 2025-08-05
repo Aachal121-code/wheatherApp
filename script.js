@@ -1,7 +1,9 @@
-const API_KEY = '3cc1b3f44b9bbe2846cfe75f05294f12';
+// const API_KEY = '3cc1b3f44b9bbe2846cfe75f05294f12';
+const API_KEY = '3cc1b3f44b9bbe2846cfe75f05294f12'; // <-- Replace with your real API key
 const form = document.getElementById('weatherForm');
 const cityInput = document.getElementById('cityInput');
 const weatherResult = document.getElementById('weatherResult');
+
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const city = cityInput.value.trim();
