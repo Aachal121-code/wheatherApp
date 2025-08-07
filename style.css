@@ -14,7 +14,13 @@ body {
     border-radius: 16px;
     box-shadow: 0 8px 32px rgba(44, 62, 80, 0.2);
     text-align: center;
-    width: 320px;
+    width: 100%;
+    max-width: 420px;
+    min-height: 80vh;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .weather-app h1 {
@@ -55,4 +61,32 @@ button[type="submit"]:hover {
     margin-top: 1rem;
     font-size: 1.1rem;
     color: #2d3436;
+}
+
+#extraDetails {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #636e72;
+}
+
+#forecast {
+    margin-top: 2rem;
+}
+
+.forecast-grid {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.forecast-day {
+    background: #f1f2f6;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    min-width: 90px;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
