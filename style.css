@@ -14,13 +14,14 @@ body {
     border-radius: 16px;
     box-shadow: 0 8px 32px rgba(44, 62, 80, 0.2);
     text-align: center;
-    width: 100%;
-    max-width: 420px;
+    width: 95vw;
+    max-width: 900px;
     min-height: 80vh;
     margin: 2rem auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .weather-app h1 {
@@ -32,6 +33,9 @@ body {
     display: flex;
     gap: 0.5rem;
     margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 600px;
+    justify-content: center;
 }
 
 #cityInput {
@@ -40,6 +44,7 @@ body {
     border: 1px solid #b2bec3;
     border-radius: 6px;
     font-size: 1rem;
+    min-width: 0;
 }
 
 button[type="submit"] {
@@ -57,20 +62,45 @@ button[type="submit"]:hover {
     background: #2980b9;
 }
 
-#weatherResult {
-    margin-top: 1rem;
-    font-size: 1.1rem;
-    color: #2d3436;
+.weather-horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 1.5rem;
 }
 
+#weatherResult,
+#extraDetails,
+#forecast {
+    margin: 0;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+}
+
+#weatherResult {
+    font-size: 1.1rem;
+    color: #2d3436;
+    min-width: 220px;
+}
+
+
 #extraDetails {
-    margin-top: 1rem;
     font-size: 1rem;
     color: #636e72;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.3rem;
 }
 
 #forecast {
     margin-top: 2rem;
+    width: 100%;
 }
 
 .forecast-grid {
@@ -89,4 +119,38 @@ button[type="submit"]:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+/* Responsive styles */
+@media (max-width: 900px) {
+    .weather-app {
+        width: 99vw;
+        max-width: 99vw;
+        padding: 1rem 0.5rem;
+    }
+    .weather-horizontal {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    #weatherForm {
+        flex-direction: column;
+        max-width: 100vw;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .weather-app {
+        padding: 0.5rem 0.2rem;
+        min-height: 100vh;
+    }
+    .forecast-grid {
+        gap: 0.5rem;
+    }
+    .forecast-day {
+        min-width: 70px;
+        padding: 0.3rem 0.5rem;
+    }
 }
