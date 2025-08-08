@@ -14,7 +14,7 @@ A responsive web application that displays current weather and a 5-day forecast 
 
 ## Screenshots
 
-![WeatherApp Screenshot] (image.png)
+![weatherapp screenshot](image-1.png)
 ## Demo
 
 You can run the app locally by following the steps below.
