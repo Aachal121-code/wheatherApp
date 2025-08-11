@@ -1,4 +1,4 @@
-# wheatherApp# WeatherApp
+# wheatherApp
 
 A responsive web application that displays current weather and a 5-day forecast for any city using the [OpenWeatherMap API](https://openweathermap.org/api).
 
